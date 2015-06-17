@@ -1,0 +1,24 @@
+{
+  "name": "app-context-initialize",
+  "description": "Simple initializer framework for use with app-context",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mattinsler/app-context-initialize",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattinsler/app-context-initialize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattinsler/app-context-initialize/issues"
+  },
+  "main": "lib/app-context-initialize",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^3.1.0",
+    "npm": "^2.11.2",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
