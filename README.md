@@ -36,7 +36,7 @@ module.exports = AppContext.createContext({
         'no-config-initializer',
         ['access-mongo', '$mongodb.default'],
         ['access-mongo', 'mongodb://localhost/database'],
-        [require('./initializers/s3', '$s3')],
+        [require('./initializers/s3'), '$s3'],
         {
           redis: {
             default: '$redis.default',
