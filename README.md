@@ -36,6 +36,7 @@ module.exports = AppContext.createContext({
         'no-config-initializer',
         ['access-mongo', '$mongodb.default'],
         ['access-mongo', 'mongodb://localhost/database'],
+        ['connie', 'dir', 'config/' + APP.environment],
         [require('./initializers/s3', '$s3')],
         {
           redis: {
@@ -45,6 +46,33 @@ module.exports = AppContext.createContext({
         }
       )
     );
+  }
+});
+```
+
+Alternatively you can use `app-context-initialize` to completely configure
+your `AppContext`.
+
+```javascript
+var AppContext = require('app-context');
+var initialize = require('app-context-initialize');
+
+module.exports = AppContext.createContext({
+  configure: function() {
+    initialize.context(this, {
+      configured: [
+        ['connie', 'dir', 'config/' + APP.environment]
+      ],
+      connected: {
+        'access-mongo': {
+          default: '$mongodb.default',
+          users: '$mongodb.users'
+        },
+        redis: {
+          sessions: 'redis.sessions'
+        }
+      }
+    });
   }
 });
 ```
