@@ -1,7 +1,7 @@
 {
   "name": "app-context-initialize",
   "description": "Simple initializer framework for use with app-context",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/mattinsler/app-context-initialize",
   "repository": {
     "type": "git",

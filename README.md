@@ -62,6 +62,10 @@ module.exports = AppContext.createContext({
     initialize.context(this, {
       configured: [
         ['connie', 'dir', 'config/' + APP.environment]
+        // this is the same as (reading from the APP/context)
+        ['connie', 'dir', 'config/${environment}']
+        // or even (reading from environment variables)
+        ['connie', 'dir', 'config/${NODE_ENV}']
       ],
       connected: {
         'access-mongo': {
